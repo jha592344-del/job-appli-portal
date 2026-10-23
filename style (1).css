@@ -1,0 +1,210 @@
+/* ---------- Colors (change them here) ---------- */
+:root {
+  --navy: #14284b;
+  --white: #ffffff;
+  --grey: #f1f3f6;
+  --text: #2b2f36;
+  --accent: #f5a623;
+}
+
+/* ---------- Basic reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- Navigation bar ---------- */
+.navbar {
+  background: var(--navy);
+  padding: 15px 0;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 24px;
+}
+
+.navbar nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Hero section ---------- */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 0 70px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--navy);
+}
+
+.btn-accent:hover {
+  background: #dd9112;
+}
+
+.btn:disabled {
+  background: #c4c9d2;
+  color: #5b6370;
+  cursor: not-allowed;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 50px 0;
+}
+
+.section.grey {
+  background: var(--grey);
+}
+
+.section-title {
+  color: var(--navy);
+  margin-bottom: 25px;
+}
+
+/* ---------- Job cards ---------- */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background: var(--white);
+  border: 1px solid #dde1e8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.job-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(20, 40, 75, 0.12);
+}
+
+.job-card h3 {
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+
+.company {
+  font-weight: bold;
+}
+
+.info {
+  color: #5b6370;
+  margin-bottom: 15px;
+}
+
+/* ---------- Applied jobs ---------- */
+.applied-list {
+  list-style: none;
+}
+
+.applied-list li {
+  background: var(--white);
+  border-left: 5px solid var(--accent);
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: #5b6370;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ---------- Responsive layout ---------- */
+@media (max-width: 800px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
